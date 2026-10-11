@@ -244,11 +244,11 @@ var CONFIG = {
   videoUrl: "",   // optional: YouTube-Embed, z. B. "https://www.youtube.com/embed/VIDEO_ID"
   bio: "Tôi hiểu một ngày ở tiệm bận rộn thế nào: tay đang làm khách, điện thoại thì reo, lịch hẹn lại ghi ở mấy chỗ khác nhau. Mỗi ngày tôi trò chuyện với chủ các tiệm nail, tiệm tóc, barbershop và spa, và tôi nghe những lo lắng này rất thường xuyên.",
   impressum: {
-    name:    "[Vor- und Nachname bzw. Firma]",
-    address: "[Straße und Hausnummer, PLZ Ort, Land]",
-    email:   "[E-Mail-Adresse]",
-    phone:   "[Telefonnummer]",
-    vat:     ""   // optional: USt-IdNr., z. B. "USt-IdNr.: DE123456789"
+    name:    "Fresha.com SV Ireland Ltd.",
+    address: "Block A, George's Quay Plaza, George's Quay, D02 E440, Dublin 2, Ireland",
+    reg:     "Eingetragen in Irland unter der Nummer 654648",
+    email:   "",   // WICHTIG: E-Mail-Adresse eintragen (in DE/AT Pflicht im Impressum)
+    phone:   ""    // optional
   },
   /* Echte Kundenstimmen (mit Erlaubnis!) hier eintragen und showTestimonials auf true setzen.
      Keine erfundenen Zitate veröffentlichen. */
@@ -271,8 +271,12 @@ document.getElementById('dat').href=CONFIG.datenschutzUrl;
 var I=CONFIG.impressum;
 document.getElementById('imp-name').textContent=I.name;
 document.getElementById('imp-addr').textContent=I.address;
-document.getElementById('imp-contact').textContent="E-Mail: "+I.email+" · Telefon: "+I.phone+" · WhatsApp: "+CONFIG.whatsappUrl;
-document.getElementById('imp-vat').textContent=I.vat;
+var parts=["Ansprechpartner: "+CONFIG.name];
+if(I.email)parts.push("E-Mail: "+I.email);
+if(I.phone)parts.push("Telefon: "+I.phone);
+parts.push("WhatsApp: "+CONFIG.whatsappUrl);
+document.getElementById('imp-contact').textContent=parts.join(" · ");
+document.getElementById('imp-vat').textContent=I.reg;
 document.getElementById('imp').addEventListener('click',function(e){
   e.preventDefault();var s=document.getElementById('impressum');s.hidden=false;s.scrollIntoView({behavior:'smooth'});
 });
