@@ -93,7 +93,11 @@ details a{color:var(--p);font-weight:600}
 .offer .w{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;text-align:left}
 .offer .big{font-size:clamp(44px,8vw,64px);font-weight:700;color:var(--p);line-height:1}
 .offer h2{text-align:left;font-size:clamp(20px,2.6vw,26px);margin:0 0 6px}
-.offer p{color:var(--mut);font-size:15px;max-width:560px}
+.flag{width:24px;height:16px;border-radius:3px;vertical-align:-3px;margin-right:4px;box-shadow:0 0 0 1px rgba(0,0,0,.18)}
+.flag.sq{width:18px;height:18px;vertical-align:-4px}
+.offer .w>div:last-child{flex:1 1 320px;max-width:640px}
+.offer p{color:var(--mut);font-size:15px;margin:4px 0}
+.offer p strong{color:var(--ink)}
 .offer small{display:block;margin-top:6px;color:#6a677d;font-size:13px}
 #impressum{background:#fff;border-top:1px solid #e3e1ee;padding:40px 0;font-size:14px;color:var(--mut)}
 #impressum h2{text-align:left;font-size:22px;color:var(--ink)}
@@ -122,10 +126,11 @@ footer a{color:#1f7d91}
 </div></div>
 
 <div class="offer"><div class="w">
-  <div class="big" aria-hidden="true">0%</div>
+  <div class="big">0%</div>
   <div>
-    <h2>0% phí hoa hồng cho khách hàng mới đến từ Fresha, tại Đức và Áo</h2>
-    <p>Tại Đức và Áo, khi khách hoàn toàn mới tìm thấy tiệm của anh/chị qua Fresha, anh/chị không phải trả phí hoa hồng cho lần đầu đó. Tại Thụy Sĩ, Fresha tính phí hoa hồng một lần là 20% cho mỗi khách hàng mới.</p>
+    <h2>Phí hoa hồng cho khách hàng mới từ Fresha</h2>
+    <p><svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg><svg class="flag" viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="2" fill="#ED2939"/><rect y="2" width="9" height="2" fill="#fff"/><rect y="4" width="9" height="2" fill="#ED2939"/></svg> <strong>Tại Đức và Áo:</strong> khi khách hoàn toàn mới tìm thấy tiệm của anh/chị qua Fresha, anh/chị không phải trả phí hoa hồng cho lần đầu đó.</p>
+    <p><svg class="flag sq" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#D52B1E"/><rect x="13" y="6" width="6" height="20" fill="#fff"/><rect x="6" y="13" width="20" height="6" fill="#fff"/></svg> <strong>Tại Thụy Sĩ:</strong> Fresha tính phí hoa hồng một lần là 20% cho mỗi khách hàng mới.</p>
     <small id="offernote"></small>
   </div>
 </div></div>
