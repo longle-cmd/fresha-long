@@ -56,11 +56,13 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.18;font-weight:700;margin-bott
 .me b{display:block}
 .hrow{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;max-width:none;margin-top:46px}
 .hero .hb small{text-wrap:balance}
-.live{display:flex;align-items:center;gap:8px;min-height:24px;margin-top:14px;font-size:15px;color:#2b2a35;visibility:hidden}
+.live{display:inline-flex;align-items:center;gap:10px;min-height:60px;margin-top:18px;padding:10px 18px 10px 14px;background:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.08);color:var(--ink);visibility:hidden}
 .live.on{visibility:visible}
 .live.off{display:none}
-.live b{font-variant-numeric:tabular-nums}
-.live i{flex:none;align-self:flex-start;margin-top:.5em;width:8px;height:8px;border-radius:50%;background:#12a150;}
+.live b{font-size:clamp(24px,2.6vw,30px);line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+.live span{font-size:14px;font-weight:600;line-height:1.25}
+.live small{display:block;font-size:12px;font-weight:400;color:var(--mut);margin-top:2px}
+.live i{flex:none;width:8px;height:8px;border-radius:50%;background:#12a150;}
 .live.on i{animation:pulse 1.6s ease-out}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,161,80,.45)}100%{box-shadow:0 0 0 8px rgba(18,161,80,0)}}
 .proof{background:#fff;color:var(--ink);padding:24px 0;border-bottom:1px solid var(--line)}
@@ -219,7 +221,7 @@ footer{background:var(--soft);text-align:center;padding:22px 20px;color:var(--mu
   .cmp-r{gap:10px}
   .cmp-r b{position:static;width:auto;height:auto;clip-path:none}
 .hero{padding:24px 0 40px;--aurora:radial-gradient(120% 34% at 45% 6%,#d3d0ff 0,rgba(211,208,255,.5) 45%,rgba(211,208,255,0) 100%),radial-gradient(120% 30% at 60% 96%,#fcd0ff 0,rgba(252,208,255,0) 100%),#fff}
-  .live{font-size:14px}section{padding:48px 0}.about .photo{max-width:300px}
+  .live{margin-top:14px}section{padding:48px 0}.about .photo{max-width:300px}
   .proof .w{grid-template-columns:repeat(2,1fr)}
   .brand span{display:none}
   .lang .l{display:none}.lang .s{display:inline}
